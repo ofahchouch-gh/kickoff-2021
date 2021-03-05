@@ -2,13 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Visitekaartje van {NAAM}</title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/app.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <canvas id="matrix-rain-canvas"></canvas>
   
+  <div class="flex-container body-container">
+    <div class="flex-container card-container">
+      <div class="flex-container card-header-container">
+        <div class="flex-item card-header-title-container">
+          <p id="card-header-title">Oussama Fahchouch</p>
+          <p id="card-header-sub-title">Student Informatica</p>
+        </div>
+      </div>
+      <div class="flex-container card-body-container">
+        <div class="flex-item card-body-about-me-container">
+          <p id="about-me">
+            Hoi :)! Als Informatica student op de Hogeschool Leiden wil ik graag een full stack JavaScript web developer worden. Momenteel werk ik met de MEAN stack.
+            <br><br>Hiervoor heb ik MBO Applicatie Ontwikkeling gedaan, twee keer stage gelopen en heel veel geleerd.
+            <br>Deze minor heb ik gekozen, omdat ik graag websites wil bouwen tijdens een minor. Zo kan ik mij verder verdiepen en mijn HTML/CSS/JavaScript skills verbeteren.
+          </p>
+
+          <div class="flex-item about-me-skills-container">
+            <p>
+              HTML&nbsp;
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+
+            <p>
+              CSS &nbsp;
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+
+            <p>
+              JS &nbsp;&nbsp;
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+          </div>
+        </div>
+        <div class="flex-item card-body-photo-container">
+          <img id="photo-about-me" src="https://avatars.githubusercontent.com/u/40112409?s=460&u=49d2fb2d31a15fd59369e0c4a4736bf47ad60b40&v=4" alt="Photo of Oussama">
+        </div>
+      </div>
+      <div class="flex-container card-footer-container">
+        <a id="link-to-gh" href="https://github.com/ofahchouch-gh" target="_blank">github.com/ofahchouch-gh</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/matrix-rain.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

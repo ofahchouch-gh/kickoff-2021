@@ -1,19 +1,38 @@
-import { fetchTribe } from './modules/api.js'
-import { renderTribe } from './modules/render.js'
-import { refetchAPI, loading } from './modules/ui.js'
+const url = 'https://600ff44f6c21e1001704fac2.mockapi.io/minor-web/api/'
 
-if (localStorage.hasOwnProperty('tribe')) {
-    const tribe = JSON.parse(localStorage.getItem('tribe'))
+// GET REQUEST
+const teams = fetch(`${url}/squads/1/teams/3/members/`)
+                .then(response => response.json())
+                .then(data => console.log('fetch', data));
 
-    renderTribe(tribe)
-} else {
-    fetchTribe().then(tribe => {
-        renderTribe(tribe)
-    }).catch(error => {
-        console.log(error) 
-    }).finally(() => {
-        loading(false)
-    })
+// PUT REQUEST
+const putData = {
+    id:1,
+    teamId:1,
+    name:'Sanne',
+    prefix:'',
+    surname:'Duinker',
+    mugshot:'',
+    githubHandle:'',
+    other: {
+        sport: '',
+        muziek: '',
+        werkplek: ''
+    }
 }
 
-refetchAPI();
+async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    return response.json();
+}
+  
+postData(`${url}/squads/1/teams/1/members/1`, putData)
+    .then(data => {
+        console.log('put', data);
+    });
