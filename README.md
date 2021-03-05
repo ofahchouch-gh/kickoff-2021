@@ -1,7 +1,7 @@
 # Minor Web Design & Development Kickoff 2021
 
 ## Business card Minor Web development & design
-(https://ofahchouch-gh.github.io/kickoff-2021)
+Live: https://ofahchouch-gh.github.io/kickoff-2021
 
 <p align="center">
   <img src="/assets/imgs/kickoff2021.png" />
